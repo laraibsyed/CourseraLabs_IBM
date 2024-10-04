@@ -12,3 +12,14 @@ with open(path, "wb") as f:
     f.write(r.content)
 
 print(f"File downloaded successfully to: {path}")
+
+url_get='http://httpbin.org/get'
+payload={"name":"Joseph","ID":"123"}
+r=requests.get(url_get,params=payload)
+print("request body:", r.request.body)
+url_post='http://httpbin.org/post'
+r_post=requests.post(url_post,data=payload)
+print("POST request URL:",r_post.url )
+print("GET request URL:",r.url)
+print("POST request body:",r_post.request.body)
+print("GET request body:",r.request.body)

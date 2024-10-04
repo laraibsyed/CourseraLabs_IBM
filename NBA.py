@@ -64,6 +64,6 @@ games_away["PTS"].mean()
 fig, ax = plt.subplots()
 
 games_away.plot(x='GAME_DATE',y='PTS', ax=ax)
-games_home.plot(x='GAME_DATE',y='PTS', ax=ax)
+games_home.plot(x='GAME_DATE',y='PTS  ', ax=ax)
 ax.legend(["away", "home"])
 plt.show()
